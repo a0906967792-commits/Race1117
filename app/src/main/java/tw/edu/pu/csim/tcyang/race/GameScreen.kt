@@ -37,7 +37,7 @@ fun GameScreen(message: String, gameViewModel: GameViewModel) {
 
 
         ) {
-            // 繪製圓形
+
             drawCircle(
                 color = Color.Red,
                 radius = 100f,
