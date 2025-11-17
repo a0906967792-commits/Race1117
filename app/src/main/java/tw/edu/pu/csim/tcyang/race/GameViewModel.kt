@@ -21,6 +21,8 @@ class GameViewModel: ViewModel() {
     var circleX by mutableStateOf(0f)
     var circleY by mutableStateOf(0f)
 
+    val horse = Horse()
+
     // 設定螢幕寬度與高度
     fun SetGameSize(w: Float, h: Float) {
         screenWidthPx = w
@@ -37,9 +39,16 @@ class GameViewModel: ViewModel() {
                 delay(100)
                 circleX += 10
 
-                if (circleX >= screenWidthPx - 100){
+                if (circleX >= screenWidthPx - 300){
                     circleX = 100f
+
                 }
+
+                horse.HorseRun()
+                if (horse.horseX >= screenWidthPx - 200){
+                    horse.horseX = 0
+                }
+
             }
         }
     }
